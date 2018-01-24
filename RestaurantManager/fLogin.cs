@@ -1,9 +1,11 @@
-﻿using System;
+﻿using RestaurantManager.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,16 +31,26 @@ namespace RestaurantManager
         {
             Application.Exit();
         }
-
+        public bool login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.login(userName, passWord);
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            fTableManager f = new fTableManager();
-            f.ShowDialog();
-            txbPassWord.Clear();
-            txbUser.Clear();
-            txbUser.Focus();
-            this.Show();
+            if(login(txbUser.Text,txbPassWord.Text))
+            {
+                this.Hide();
+                fTableManager f = new fTableManager();
+                f.ShowDialog();
+                txbPassWord.Clear();
+                txbUser.Clear();
+                txbUser.Focus();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tên đăng nhận không tồn tại hoặc mật khẩu sai","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

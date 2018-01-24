@@ -8,9 +8,13 @@ using System.Threading.Tasks;
 
 namespace RestaurantManager.DAO
 {
-    class DataProvider
+    public class DataProvider
     {
+        private static DataProvider instance;
         private string connectStr = @"Data Source=ndc07;Initial Catalog=QL_NhaHang;Integrated Security=True";
+        public static DataProvider Instance { get { if (instance == null) instance = new DataProvider();return instance; }
+            private set => instance = value; }
+        private DataProvider() { }
         public DataTable ExecuteQuery(string query, object[] parameter=null)
         {
             DataTable data = new DataTable();
@@ -37,7 +41,7 @@ namespace RestaurantManager.DAO
             }
             return data;
         }
-        public int ExecuteNoneQuery(string query, object[] parameter=null)
+        public int ExecuteNoneQuery(string query, object[] parameter=null)// Insert -- Update -- Delete
         {
             int data = 0;
             using (SqlConnection connection = new SqlConnection(connectStr))
