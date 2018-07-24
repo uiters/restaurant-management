@@ -40,7 +40,7 @@
             this.txbNewPass = new System.Windows.Forms.TextBox();
             this.txbReNewPass = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnUpdateAccount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -128,6 +128,7 @@
             this.txbPassWord.Name = "txbPassWord";
             this.txbPassWord.Size = new System.Drawing.Size(279, 25);
             this.txbPassWord.TabIndex = 15;
+            this.txbPassWord.UseSystemPasswordChar = true;
             // 
             // txbNewPass
             // 
@@ -138,6 +139,7 @@
             this.txbNewPass.Name = "txbNewPass";
             this.txbNewPass.Size = new System.Drawing.Size(279, 25);
             this.txbNewPass.TabIndex = 16;
+            this.txbNewPass.UseSystemPasswordChar = true;
             // 
             // txbReNewPass
             // 
@@ -148,6 +150,7 @@
             this.txbReNewPass.Name = "txbReNewPass";
             this.txbReNewPass.Size = new System.Drawing.Size(279, 25);
             this.txbReNewPass.TabIndex = 17;
+            this.txbReNewPass.UseSystemPasswordChar = true;
             // 
             // btnExit
             // 
@@ -156,6 +159,7 @@
             this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
             this.btnExit.Location = new System.Drawing.Point(335, 316);
             this.btnExit.Name = "btnExit";
@@ -165,30 +169,31 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnUpdate
+            // btnUpdateAccount
             // 
-            this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
-            this.btnUpdate.Location = new System.Drawing.Point(207, 316);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(96, 27);
-            this.btnUpdate.TabIndex = 18;
-            this.btnUpdate.Text = "Cập nhập";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdateAccount.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            this.btnUpdateAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnUpdateAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.btnUpdateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateAccount.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
+            this.btnUpdateAccount.Location = new System.Drawing.Point(209, 316);
+            this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdateAccount.Name = "btnUpdateAccount";
+            this.btnUpdateAccount.Size = new System.Drawing.Size(103, 27);
+            this.btnUpdateAccount.TabIndex = 23;
+            this.btnUpdateAccount.Text = "Cập nhật";
+            this.btnUpdateAccount.UseVisualStyleBackColor = true;
+            this.btnUpdateAccount.Click += new System.EventHandler(this.btnUpdateAccount_Click);
             // 
             // fAccountProfile
             // 
-            this.AcceptButton = this.btnUpdate;
+            this.AcceptButton = this.btnUpdateAccount;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(469, 387);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnUpdateAccount);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txbReNewPass);
             this.Controls.Add(this.txbNewPass);
@@ -205,6 +210,7 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Thông tin cá nhân";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fAccountProfile_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,6 +229,6 @@
         private System.Windows.Forms.TextBox txbNewPass;
         private System.Windows.Forms.TextBox txbReNewPass;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnUpdateAccount;
     }
 }

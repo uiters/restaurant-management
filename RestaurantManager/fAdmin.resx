@@ -194,4 +194,20 @@
         AH/+AAB//gAAf/8AAP//gAD//4AD///AB/8=
 </value>
   </data>
+  <data name="reportDesigner1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>548, 17</value>
+  </data>
+  <data name="applicationMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>216, 17</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="xrDesignDockManager1.ImageStream" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="xrDesignDockManager1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>366, 17</value>
+  </data>
+  <data name="xrDesignRibbonController1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
 </root>

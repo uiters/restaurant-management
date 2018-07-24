@@ -11,7 +11,7 @@ namespace RestaurantManager.DAO
     public class DataProvider
     {
         private static DataProvider instance;
-        private string connectStr = @"Data Source=ndc07;Initial Catalog=QL_NhaHang;Integrated Security=True";
+        private string connectStr = @"Data Source=ndc07;Initial Catalog = QL_NhaHang; User ID = sa; pwd=123456";
         public static DataProvider Instance { get { if (instance == null) instance = new DataProvider();return instance; }
             private set => instance = value; }
         private DataProvider() { }

@@ -12,6 +12,7 @@ namespace RestaurantManager.DTO
         private string name;
         private int count;
         private float price;
+        
         public Menu(string name, int count, float price)
         {
             this.Name = name;

@@ -1,4 +1,5 @@
 ﻿using RestaurantManager.DAO;
+using RestaurantManager.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,8 @@ namespace RestaurantManager
             if(login(txbUser.Text,txbPassWord.Text))
             {
                 this.Hide();
-                fTableManager f = new fTableManager();
+                Account account = AccountDAO.Instance.getAccount(txbUser.Text, txbPassWord.Text);
+                fTableManager f = new fTableManager(account.UserName,account.DisplayName,account.PassWord,account.Type);
                 f.ShowDialog();
                 txbPassWord.Clear();
                 txbUser.Clear();

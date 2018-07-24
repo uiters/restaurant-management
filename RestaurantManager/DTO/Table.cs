@@ -12,6 +12,7 @@ namespace RestaurantManager.DTO
         int id;
         string name;
         string status;
+        public Table() { }
         public Table(int id,string name, string status)
         {
             this.Id = id;
