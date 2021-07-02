@@ -1,3 +1,7 @@
+# ⚠️⚠️⚠️ Please star this repository to support developers.
+
+![starring-a-repository](https://user-images.githubusercontent.com/34389409/124223389-d0eaeb80-db2d-11eb-8f3e-0adcd513e083.png)
+
 # Restaurant Mangement
 
 > 🍔🍟🍕🍺Restaurant Management App using C# and SQL Server.
